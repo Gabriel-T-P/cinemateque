@@ -26,3 +26,5 @@ pt-BR:
       title: 'Atores'
     new:
       title: 'Novo Ator'
+    create:
+      success: 'Ator criado com sucesso'

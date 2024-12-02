@@ -29,5 +29,5 @@ describe 'usuário vê todos os atores' do
     expect(page).to have_content 'teste1'
     expect(page).to have_content 'teste2'
   end
-  
+
 end

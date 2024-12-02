@@ -25,5 +25,18 @@ describe 'usuário registra ator ou atriz' do
     expect(current_path).to eq new_user_session_path
   end
 
+  it 'com sucesso' do
+    user = FactoryBot.create(:user)
+    
+    login_as user
+    visit new_actor_path
+    fill_in 'Nome',	with: 'sometext' 
+    fill_in 'Data de Nascimento',	with: Date.current 
+    fill_in 'Nacionalidade',	with: 'sometext2'
+    click_on 'Criar Ator'
 
+    expect(page).to have_content 'Ator criado com sucesso'
+    expect(page).to have_content 'sometext'  
+    expect(page).to have_content 'sometext2'  
+  end
 end
