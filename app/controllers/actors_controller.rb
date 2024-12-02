@@ -7,6 +7,10 @@ class ActorsController < ApplicationController
     @actor = Actor.new
   end
 
+  def show
+    @actor = Actor.find(params[:id])
+  end
+
   def create
     @actor = Actor.new(params.require(:actor).permit(:name, :birth_date, :nationality))
 

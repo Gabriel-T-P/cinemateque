@@ -1,0 +1,13 @@
+<%= page_title('Criar Papel') %>
+<%= form_with(model: @paper) do |f| %>
+  <div class="mb-6">
+    <%= f.label :character, class: 'form-label' %>
+    <%= f.text_field :character, class: 'form-field' %>
+  </div>
+
+  <div>
+    
+  </div>
+
+  <%= f.submit 'Criar Filme', class: 'btn-confirm' %>
+<% end %>

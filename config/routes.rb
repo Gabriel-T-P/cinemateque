@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
   resources :movies, only: [:index, :new, :create]
 
-  resources :actors, only: [:new, :create, :show, :index]
+  resources :actors, only: [:new, :create, :show, :index] do
+    resources :paper, only: [:new, :create]
+  end
 end
